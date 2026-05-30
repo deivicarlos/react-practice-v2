@@ -1,4 +1,4 @@
-import useCounter from "hooks/useCounter";
+import useCounter from "@/hooks/useCounter";
 
 type ButtonProps = React.ComponentPropsWithoutRef<"button"> & {
     variant?: "primary" | "danger"

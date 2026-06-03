@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 import { useState } from 'react';
+import CharacterCounter from './CharacterCounter';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -13,7 +14,9 @@ const App = () => {
       <div className="flex w-full flex-1">
         <div className="flex w-full flex-row gap-x-2">
           <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-          <div className="flex flex-1 flex-col rounded-lg bg-teal-200">{activeTab}</div>
+          <div className="flex flex-1 flex-col rounded-lg bg-teal-200 w-52">
+            <CharacterCounter limit={10} />
+          </div>
         </div>
       </div>
       <Footer />
